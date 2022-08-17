@@ -1,0 +1,167 @@
+h2{
+  margin-top:50px;
+ font-family: segoe script;
+ font-weight: bold;
+
+}
+
+#i{
+  position: relative;
+  bottom: 38px;
+  left: 350px;
+}
+
+i{
+  position: relative;
+  bottom: 38px;
+  left: 170px;
+}
+
+button{
+  width:250px;
+  height: 50px;
+  background-color: #ffa827;
+  color: white;
+  font-family: segoe script;
+  font-weight: bold;
+  border-radius: 30px;
+}
+button:hover{
+background-color: #f5ae43;
+
+}
+
+//preservar daqui até
+.pf-main-container {
+  .pf-header {
+      width: 100%;
+      height: 200px;
+      background-color: #ffa827; //#fb6400
+      position: absolute;
+      top: 0;
+      z-index: -1;
+  }
+
+  .pf-body {
+      padding: 25px 0px;
+
+
+      .pf-body-content {
+        position: relative;
+        top: 80px;
+        left: 140px;
+          width: 50%;
+          height: auto;
+          background-color: white;
+          border-radius: 5px;
+          text-align: center;
+          padding: 10px 15%;
+
+          .body-content-header {
+
+              .content-header-logo {
+                  object-fit: cover;
+                  max-width: 400px;
+              }
+
+              .content-header-title {
+                  font-size: 36px;
+                  font-weight: 400;
+              }
+
+              .content-header-subtitle {
+                  font-size: 18px;
+                  font-weight: 400;
+                  color: slategrey;
+              }
+
+              .content-header-price {
+                  padding: 12px 0px;
+                  margin-top: -12px;
+                  font-size: 28px;
+                  font-weight: 500;
+              }
+
+              .invoice-input {
+                  text-align: end;
+
+              }
+          }
+
+
+
+  .pf-footer {
+    position: relative;
+    top: 280px;
+      height: 64px;
+      font-size: 14px;
+      font-weight: 500;
+      text-align: center;
+
+      .pf-footer-support {
+          padding: 5px 0px;
+
+          a {
+              margin-left: 5px;
+          }
+      }
+
+      .pf-footer-other-links {
+          padding: 5px 0px;
+
+          a {
+              padding: 0px 5px;
+              text-decoration: none;
+              color: #ffa827;
+          }
+
+          a:hover {
+              text-decoration: underline;
+          }
+
+          .pf-footer-separator {
+              color: #000 !important;
+              text-decoration: none !important;
+          }
+      }
+  }
+}
+}
+}
+
+@media (max-width: 767px) {
+  .pf-main-container {
+      .pf-header {
+          height: 100px !important;
+      }
+  }
+
+  .pf-body {
+      padding: 25px 10px!important;
+
+      .pf-body-content {
+          padding: 10px 5% !important;
+
+          .body-content-header {
+              .content-header-logo {
+                  max-width: 250px !important;
+              }
+          }
+
+          .body-content-body {
+              .payment-option-credit-card {
+                  .payment-option-action {
+                      padding-right: 0px !important;
+                      padding-left: 0px !important;
+
+                      .payment-option-action-content {
+                          min-width: auto !important;
+                          max-width: auto !important;
+                          width: 100% !important;
+                      }
+                  }
+              }
+          }
+      }
+  }
+}

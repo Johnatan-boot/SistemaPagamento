@@ -1,0 +1,38 @@
+<div class="checkout">
+  <div class="checkout-in">    
+    <div class="checkout-customer">
+      <div class="title">Olá, <span class="highlight">{{orderData?.name}}</span></div>
+    </div>
+
+    <div class="checkout-card">
+     
+      <form action="" [formGroup]="form" (submit)="initPay()">
+        <div class="input input-amount">
+          <label class="label">Quantia </label>
+          <input type="text"  readonly formControlName="amount" placeholder="0.00">
+          <span class="currency">USD</span>
+        </div>
+        <hr>
+        <div class="input">
+          <label class="label">Número do cartão</label>
+          <div id="card"></div>
+        </div>
+        <hr>
+        <div class="falling">
+        <div class="input1">
+          <label class="label">Data de vencimento</label>
+          <div id="exp"></div>
+        </div>
+        <div class="input2">
+          <label class="label">CVC</label>
+          <div id="cvc"></div>
+        </div>
+        
+        </div>
+         
+
+        <button [disabled]="form.invalid || form.disabled" class="button" type="submit">Pagar</button>
+      </form>
+    </div>
+  </div>
+</div>

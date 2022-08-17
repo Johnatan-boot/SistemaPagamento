@@ -1,0 +1,63 @@
+<div class="pf-main-container">
+  <div class="pf-header"></div>
+
+  <div class="pf-body container">
+      <div class="pf-body-content">
+        <!--Formulario de Pagamento -->
+
+        <!--Parte do Logo e a descrição de insira valor e o num. da fatura a pagar-->
+         <form class="body-content-header" [formGroup]="contentFG">
+              <img class="content-header-logo" [src]="contentFG.controls['logo'].value">
+              <h3 class="content-header-subtitle">{{ contentFG.controls['subtitle'].value }}</h3>
+            <!--Parte do Logo e a descrição de insira valor e o num. da fatura a pagar-->
+
+            <!--Parte dos Inputs Invoice = Fatura amount = Quantidade Pagar -->
+            <div class="row">
+              <div class="col-md-6 col-12" appearance="outline">
+              <input matInput formControlName="invoice" required placeholder="Invoice #">
+              <i id="i" class="fa fa-barcode" aria-hidden="true"></i>
+              <mat-hint>*Required</mat-hint>
+
+              </div>
+              <div class="col-md-6 col-12" appearance="outline">
+                <mat-label>Amount</mat-label>
+                <input matInput class="invoice-input" formControlName="price"  placeholder=" Amount 0.00">
+                <i class="fa fa-usd" aria-hidden="true"></i>
+                <mat-hint>*Required</mat-hint>
+              </div>
+            </div>
+              <!--Parte dos Inputs Invoice = Fatura amount = Quantidade Pagar -->
+
+            </form>
+            <!--Formulario de Pagamento -->
+
+            <!--Formulario de Pagamento integrado com Stripe -->
+            <h2>Exemplo de um Checkout com Angular e Stripe</h2>
+
+              <button (click)="makePayment(15)">Pague com Stripe</button>
+
+              <div *ngIf="success">
+                <h1>Seu Pagamento foi Realizado com Sucesso!</h1>
+              </div>
+              <div *ngIf="failure">
+                  <h1>Ocorreu um Erro de token Em Seu Pagamento!</h1>
+              </div>
+
+
+
+
+
+  <div class="pf-footer">
+      <div class="pf-footer-support">
+          <span>Have any Questions?</span>
+          <a [href]="'mailto:' + supportLink" target="_blank">{{ supportLink }}</a>
+      </div>
+      <div class="pf-footer-other-links">
+          <a [href]="privacyPolicylink" target="_blank" rel="noreferrer">Privacy Policy</a>
+          <a class="pf-footer-separator">•</a>
+          <a [href]="termsOfUseLink" target="_blank" rel="noreferrer">Terms of Use</a>
+      </div>
+  </div>
+
+
+

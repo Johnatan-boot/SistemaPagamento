@@ -1,0 +1,19 @@
+<div class="home">
+  <div class="home-form">
+    
+    <form [formGroup]="form" (submit)="init()">
+      <div class="input">
+        <label class="label">Nome</label>
+        <input type="text" formControlName="name" placeholder="seu nome">
+      </div>
+      <div class="input">
+        <label class="label">Quantia</label>
+        <input type="text" formControlName="amount" placeholder="15.00">
+      </div>
+      <div class="home-btn">
+        <button [disabled]="form.invalid">Gerar Link</button>
+      </div>
+    </form>
+  </div>
+   
+</div>
